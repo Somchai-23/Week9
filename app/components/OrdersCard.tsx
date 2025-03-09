@@ -1,28 +1,45 @@
-
 import React from 'react';
 import { Link } from '@remix-run/react';
 
-interface BookProps {
+interface OrderProps {
   orderNo: string;
   confirmDate: string;
   orderStatus: string;
+  priceTotal: string;
+  customer: string;
 }
 
-const BookCard: React.FC<BookProps> = ({ orderNo, confirmDate, orderStatus }) => {
+const OrderCard: React.FC<OrderProps> = ({ orderNo, confirmDate, orderStatus, priceTotal, customer }) => {
   return (
-<div className="max-w-sm rounded overflow-hidden border-2 border-black">
-  <div className="px-6 py-4">
-    <div className="text-gray-700 text-base">รหัสคำสั่งซื้อ: {orderNo}</div>
-    <div className="text-gray-700 text-base">วันที่: {confirmDate}</div>
-    <div className="text-gray-700 text-base">สถาณะ: {orderStatus}</div>
-    <div className="px-2 text-center text-lg border-2 border-black p-1 bg-blue-100">
-      <Link to={`/order/${orderNo}`} className="text-blue-500 hover:text-blue-700">
-        รายละเอียด
-      </Link>
+    <div className="max-w-md mx-auto bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg shadow-lg overflow-hidden">
+      <div className="p-6">
+        <div className="text-xl font-bold mb-3">
+          Order ID: <span className="text-yellow-300">{orderNo}</span>
+        </div>
+        <div className="text-lg mb-2">
+          <strong>Customer:</strong> {customer}
+        </div>
+        <div className="text-lg mb-2">
+          <strong>Date:</strong> {confirmDate}
+        </div>
+        <div className="text-lg mb-4">
+          <strong>Status:</strong> <span className={`text-${orderStatus === 'Completed' ? 'green' : 'red'}-500`}>{orderStatus}</span>
+        </div>
+        <div className="text-xl font-semibold mb-4">
+          <strong>Total Price:</strong> ฿{priceTotal}
+        </div>
+
+        <div className="mt-4 flex justify-center">
+          <Link
+            to={`/order/${orderNo}`}
+            className="px-6 py-3 bg-green-500 text-white font-semibold rounded-md hover:bg-green-700 transition ease-in-out"
+          >
+            View Details
+          </Link>
+        </div>
+      </div>
     </div>
-  </div>     
-</div>
   );
 };
 
-export default BookCard;
+export default OrderCard;

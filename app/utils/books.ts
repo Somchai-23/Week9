@@ -1,49 +1,47 @@
-
-
 export const books = [
-    {
-      "id": "bk001",
-      "bookId": "bk001",
-      "bookTitle": "The Haunted Manor",
-      "bookDesc": "A chilling tale of a cursed mansion that traps its visitors.",
-      "bookAuthor": "James Holloway",
-      "bookStock": "15",
-      "bookCategory": "Horror"
-    },
-    {
-      "id": "bk002",
-      "bookId": "bk002",
-      "bookTitle": "AI and the Future",
-      "bookDesc": "Exploring how artificial intelligence is shaping the world.",
-      "bookAuthor": "Sarah Connor",
-      "bookStock": "30",
-      "bookCategory": "Technology"
-    },
-    {
-      "id": "bk003",
-      "bookId": "bk003",
-      "bookTitle": "The Art of Minimalism",
-      "bookDesc": "A guide to decluttering and living a simpler, more meaningful life.",
-      "bookAuthor": "Leo Benson",
-      "bookStock": "20",
-      "bookCategory": "Self-Help"
-    },
-    {
-      "id": "bk004",
-      "bookId": "bk004",
-      "bookTitle": "Secrets of the Universe",
-      "bookDesc": "An in-depth look into the mysteries of space and time.",
-      "bookAuthor": "Dr. Emily Carter",
-      "bookStock": "12",
-      "bookCategory": "Science"
-    },
-    {
-      "id": "bk005",
-      "bookId": "bk005",
-      "bookTitle": "Mastering JavaScript",
-      "bookDesc": "A complete guide to becoming an expert in JavaScript programming.",
-      "bookAuthor": "John Doe",
-      "bookStock": "25",
-      "bookCategory": "Programming"
-    }
-  ];
+  {
+    "id": "bk101",
+    "bookId": "bk101",
+    "bookTitle": "Whispers in the Dark",
+    "bookDesc": "A terrifying account of a haunted estate and its deadly secrets.",
+    "bookAuthor": "Alice Harper",
+    "bookStock": "18",
+    "bookCategory": "Horror"
+  },
+  {
+    "id": "bk102",
+    "bookId": "bk102",
+    "bookTitle": "The Rise of Machines",
+    "bookDesc": "A deep dive into the evolving role of AI in modern society.",
+    "bookAuthor": "Robert Williams",
+    "bookStock": "35",
+    "bookCategory": "Technology"
+  },
+  {
+    "id": "bk103",
+    "bookId": "bk103",
+    "bookTitle": "Embracing Simplicity",
+    "bookDesc": "Learn how to declutter your mind and environment to find peace.",
+    "bookAuthor": "Mia Thompson",
+    "bookStock": "22",
+    "bookCategory": "Self-Help"
+  },
+  {
+    "id": "bk104",
+    "bookId": "bk104",
+    "bookTitle": "Unlocking the Cosmos",
+    "bookDesc": "An exploration into the vastness and wonders of the universe.",
+    "bookAuthor": "Dr. Samuel Grant",
+    "bookStock": "14",
+    "bookCategory": "Science"
+  },
+  {
+    "id": "bk105",
+    "bookId": "bk105",
+    "bookTitle": "JavaScript Mastery",
+    "bookDesc": "A comprehensive guide to mastering JavaScript and web development.",
+    "bookAuthor": "Emily Johnson",
+    "bookStock": "28",
+    "bookCategory": "Programming"
+  }
+];

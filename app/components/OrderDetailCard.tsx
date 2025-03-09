@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from '@remix-run/react';
 
@@ -9,21 +8,30 @@ interface OrdersProp {
   priceTotal: string;
   customer: string;
 }
-const BookCard: React.FC<OrdersProp> = ({ orderNo, confirmDate, orderStatus }) => {
+
+const OrderCard: React.FC<OrdersProp> = ({ orderNo, confirmDate, orderStatus, priceTotal, customer }) => {
   return (
-<div className="max-w-sm rounded overflow-hidden border-2 border-black">
-  <div className="px-6 py-4">
-    <div className="text-gray-700 text-base">รหัสคำสั่งซื้อ: {orderNo}</div>
-    <div className="text-gray-700 text-base">วันที่: {confirmDate}</div>
-    <div className="text-gray-700 text-base">สถาณะ: {orderStatus}</div>
-    <div className="px-2 text-center text-lg border-2 border-black p-1 bg-blue-100">
-      <Link to={`/book/${orderNo}`} className="text-blue-500 hover:text-blue-700">
-        รายละเอียด
-      </Link>
+    <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden border border-gray-300">
+      <div className="p-6">
+        <div className="mb-4">
+          <h3 className="text-2xl font-semibold text-gray-800">Order ID: {orderNo}</h3>
+        </div>
+
+        <div className="text-gray-600">
+          <p><strong>Customer:</strong> {customer}</p>
+          <p><strong>Order Date:</strong> {confirmDate}</p>
+          <p><strong>Status:</strong> {orderStatus}</p>
+          <p><strong>Total Price:</strong> ฿{priceTotal}</p>
+        </div>
+
+        <div className="mt-6 text-center">
+          <Link to={`/order/${orderNo}`} className="px-6 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-700 transition">
+            View Details
+          </Link>
+        </div>
+      </div>
     </div>
-  </div>     
-</div>
   );
 };
 
-export default BookCard;
+export default OrderCard;
